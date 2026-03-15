@@ -1,0 +1,119 @@
+.squid-text-base {
+  font-size: var(--squid-font-size-base);
+  line-height: var(--squid-line-height-base);
+  font-weight: var(--squid-font-weight-normal);
+  color: var(--squid-color-text);
+}
+
+.squid-text-strong {
+  font-weight: var(--squid-font-weight-strong);
+}
+
+.squid-text-underline {
+  text-decoration: underline;
+}
+
+.squid-text-delete {
+  text-decoration: line-through;
+}
+
+.squid-text-italic {
+  font-style: italic;
+}
+
+.squid-text-sm {
+  font-size: var(--squid-font-size-sm);
+  line-height: var(--squid-line-height-sm);
+}
+
+.squid-text-lg {
+  font-size: var(--squid-font-size-lg);
+  line-height: var(--squid-line-height-lg);
+}
+
+.squid-text-xl {
+  font-size: var(--squid-font-size-xl);
+  line-height: var(--squid-line-height-xl);
+}
+
+.squid-text-secondary {
+  color: var(--squid-color-text-secondary);
+}
+
+.squid-text-success {
+  color: var(--squid-color-success);
+}
+
+.squid-text-warning {
+  color: var(--squid-color-warning);
+}
+
+.squid-text-danger {
+  color: var(--squid-color-danger);
+}
+
+.squid-text-disabled {
+  color: var(--squid-color-text-disabled);
+  cursor: not-allowed;
+  user-select: none;
+}
+
+.squid-link {
+  color: var(--squid-color-primary);
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    color var(--squid-motion-duration-fast),
+    opacity var(--squid-motion-duration-fast);
+}
+
+.squid-link:hover {
+  color: var(--squid-color-primary-hover);
+}
+
+.squid-link:active {
+  color: var(--squid-color-primary-active);
+}
+
+.squid-link.squid-text-underline {
+  text-decoration: underline;
+}
+
+.squid-link.squid-text-delete {
+  text-decoration: line-through;
+}
+
+.squid-link.squid-text-disabled:hover,
+.squid-link.squid-text-disabled:active {
+  color: var(--squid-color-text-disabled);
+}
+
+.squid-heading-1 {
+  font-size: var(--squid-font-size-heading-1);
+  line-height: var(--squid-line-height-heading-1);
+  font-weight: 600;
+}
+
+.squid-heading-2 {
+  font-size: var(--squid-font-size-heading-2);
+  line-height: var(--squid-line-height-heading-2);
+  font-weight: 600;
+}
+
+.squid-heading-3 {
+  font-size: var(--squid-font-size-heading-3);
+  line-height: var(--squid-line-height-heading-3);
+  font-weight: 600;
+}
+
+.squid-heading-4 {
+  font-size: var(--squid-font-size-heading-4);
+  line-height: var(--squid-line-height-heading-4);
+  font-weight: 600;
+}
+
+.squid-heading-5 {
+  font-size: var(--squid-font-size-heading-5);
+  line-height: var(--squid-line-height-heading-5);
+  font-weight: 600;
+}

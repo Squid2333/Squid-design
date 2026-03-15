@@ -1,0 +1,21 @@
+@import "./token.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--squid-font-family);
+  font-size: var(--squid-font-size-base);
+  line-height: var(--squid-line-height-base);
+  color: var(--squid-color-text);
+  background: var(--squid-color-bg-layout);
+}

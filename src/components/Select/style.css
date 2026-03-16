@@ -1,0 +1,256 @@
+.squid-select {
+  position: relative;
+  width: 100%;
+  max-width: 240px;
+  font-size: var(--squid-font-size-base);
+}
+
+.squid-select-selector {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--squid-padding-sm);
+  width: 100%;
+  padding-inline: 11px;
+  border: 1px solid var(--squid-color-border);
+  border-radius: var(--squid-border-radius-base);
+  background: var(--squid-color-bg-container);
+  color: var(--squid-color-text);
+  font: inherit;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition:
+    border-color var(--squid-motion-duration-fast),
+    box-shadow var(--squid-motion-duration-fast);
+}
+
+.squid-select-multiple .squid-select-selector {
+  align-items: center;
+  min-height: 32px;
+  height: auto;
+  padding-block: 3px;
+}
+
+.squid-select-selector:hover {
+  border-color: var(--squid-color-primary-hover);
+}
+
+.squid-select-open .squid-select-selector {
+  border-color: var(--squid-color-primary);
+  box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
+}
+
+.squid-select-error .squid-select-selector {
+  border-color: var(--squid-color-danger);
+}
+
+.squid-select-error .squid-select-selector:hover {
+  border-color: var(--squid-color-danger-hover);
+}
+
+.squid-select-error.squid-select-open .squid-select-selector {
+  border-color: var(--squid-color-danger);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--squid-color-danger) 16%, transparent);
+}
+
+.squid-select-warning .squid-select-selector {
+  border-color: var(--squid-color-warning);
+}
+
+.squid-select-warning .squid-select-selector:hover {
+  border-color: var(--squid-color-warning-hover);
+}
+
+.squid-select-warning.squid-select-open .squid-select-selector {
+  border-color: var(--squid-color-warning);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--squid-color-warning) 16%, transparent);
+}
+
+.squid-select-large .squid-select-selector {
+  height: 40px;
+  font-size: var(--squid-font-size-lg);
+}
+
+.squid-select-medium .squid-select-selector {
+  height: 32px;
+  font-size: var(--squid-font-size-base);
+}
+
+.squid-select-small .squid-select-selector {
+  height: 24px;
+  padding-inline: 7px;
+  border-radius: var(--squid-border-radius-sm);
+  font-size: var(--squid-font-size-sm);
+}
+
+.squid-select-multiple.squid-select-large .squid-select-selector {
+  min-height: 40px;
+  height: auto;
+  padding-block: 5px;
+}
+
+.squid-select-multiple.squid-select-medium .squid-select-selector {
+  min-height: 32px;
+  height: auto;
+}
+
+.squid-select-multiple.squid-select-small .squid-select-selector {
+  min-height: 24px;
+  height: auto;
+  padding-block: 1px;
+}
+
+.squid-select-placeholder {
+  color: var(--squid-color-text-placeholder);
+}
+
+.squid-select-value,
+.squid-select-placeholder {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.squid-select-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--squid-color-text-tertiary);
+  flex: 0 0 auto;
+  align-self: center;
+}
+
+.squid-select-error .squid-select-arrow {
+  color: var(--squid-color-danger);
+}
+
+.squid-select-warning .squid-select-arrow {
+  color: var(--squid-color-warning);
+}
+
+.squid-select-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  padding: var(--squid-padding-xs);
+  border: 1px solid var(--squid-color-border-secondary);
+  border-radius: var(--squid-border-radius-base);
+  background: var(--squid-color-bg-elevated);
+  box-shadow: var(--squid-box-shadow-sm);
+}
+
+.squid-select-search-input {
+  width: 100%;
+  height: 32px;
+  padding: 4px 11px;
+  border: 1px solid var(--squid-color-border);
+  border-radius: var(--squid-border-radius-sm);
+  outline: 0;
+  background: var(--squid-color-bg-container);
+  color: var(--squid-color-text);
+  font: inherit;
+}
+
+.squid-select-selector-input {
+  width: auto;
+  flex: 1 0 24px;
+  height: auto;
+  min-width: 24px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.squid-select-selection-overflow {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-width: 0;
+}
+
+.squid-select-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 100%;
+  padding: 0 7px;
+  border-radius: var(--squid-border-radius-sm);
+  background: var(--squid-color-fill-quaternary);
+  color: var(--squid-color-text);
+  line-height: 20px;
+}
+
+.squid-select-tag-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.squid-select-tag-remove {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--squid-color-text-tertiary);
+  font: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.squid-select-search-input::placeholder {
+  color: var(--squid-color-text-placeholder);
+}
+
+.squid-select-search-input:focus {
+  border-color: var(--squid-color-primary);
+}
+
+.squid-select-empty {
+  padding: 5px 11px;
+  color: var(--squid-color-text-tertiary);
+}
+
+.squid-select-option {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 32px;
+  padding: 5px 11px;
+  border: 0;
+  border-radius: var(--squid-border-radius-sm);
+  background: transparent;
+  color: var(--squid-color-text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.squid-select-option:hover {
+  background: var(--squid-color-fill-quaternary);
+}
+
+.squid-select-option-selected {
+  background: var(--squid-color-info-bg);
+  color: var(--squid-color-primary);
+}
+
+.squid-select-option-disabled {
+  color: var(--squid-color-text-disabled);
+  cursor: not-allowed;
+}
+
+.squid-select-option-disabled:hover {
+  background: transparent;
+}
+
+.squid-select-disabled .squid-select-selector {
+  background: var(--squid-color-bg-container-disabled);
+  border-color: var(--squid-color-border-secondary);
+  color: var(--squid-color-text-disabled);
+  cursor: not-allowed;
+}

@@ -1,0 +1,227 @@
+.squid-input-affix-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--squid-padding-xs);
+  width: 100%;
+  max-width: 240px;
+  padding-inline: 11px;
+  border: 1px solid var(--squid-color-border);
+  border-radius: var(--squid-border-radius-base);
+  background: var(--squid-color-bg-container);
+  color: var(--squid-color-text);
+  transition:
+    border-color var(--squid-motion-duration-fast),
+    box-shadow var(--squid-motion-duration-fast),
+    background-color var(--squid-motion-duration-fast);
+}
+
+.squid-input-affix-wrapper-has-count {
+  gap: var(--squid-padding-sm);
+}
+
+.squid-input-affix-wrapper-has-password {
+  gap: var(--squid-padding-sm);
+}
+
+.squid-input-affix-wrapper-outlined {
+  border-color: var(--squid-color-border);
+  background: var(--squid-color-bg-container);
+}
+
+.squid-input-affix-wrapper-outlined:hover {
+  border-color: var(--squid-color-primary-hover);
+}
+
+.squid-input-affix-wrapper-outlined:focus-within {
+  border-color: var(--squid-color-primary);
+  box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
+}
+
+.squid-input-affix-wrapper-filled {
+  border-color: transparent;
+  background: var(--squid-color-fill-quaternary);
+}
+
+.squid-input-affix-wrapper-filled:hover {
+  background: var(--squid-color-fill-tertiary);
+}
+
+.squid-input-affix-wrapper-filled:focus-within {
+  background: var(--squid-color-bg-container);
+  border-color: var(--squid-color-primary);
+  box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
+}
+
+.squid-input-affix-wrapper-error {
+  border-color: var(--squid-color-danger);
+}
+
+.squid-input-affix-wrapper-error:hover {
+  border-color: var(--squid-color-danger-hover);
+}
+
+.squid-input-affix-wrapper-error:focus-within {
+  border-color: var(--squid-color-danger);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--squid-color-danger) 16%, transparent);
+}
+
+.squid-input-affix-wrapper-warning {
+  border-color: var(--squid-color-warning);
+}
+
+.squid-input-affix-wrapper-warning:hover {
+  border-color: var(--squid-color-warning-hover);
+}
+
+.squid-input-affix-wrapper-warning:focus-within {
+  border-color: var(--squid-color-warning);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--squid-color-warning) 16%, transparent);
+}
+
+.squid-input-affix-wrapper-borderless {
+  padding-inline: 0;
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+.squid-input-affix-wrapper-borderless:hover,
+.squid-input-affix-wrapper-borderless:focus-within {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.squid-input-affix-wrapper-underlined {
+  padding-inline: 0;
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: var(--squid-color-border);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.squid-input-affix-wrapper-underlined:hover {
+  border-bottom-color: var(--squid-color-primary-hover);
+}
+
+.squid-input-affix-wrapper-underlined:focus-within {
+  border-bottom-color: var(--squid-color-primary);
+  box-shadow: none;
+}
+
+.squid-input-affix-wrapper-large {
+  height: 40px;
+  font-size: var(--squid-font-size-lg);
+}
+
+.squid-input-affix-wrapper-medium {
+  height: 32px;
+  font-size: var(--squid-font-size-base);
+}
+
+.squid-input-affix-wrapper-small {
+  height: 24px;
+  padding-inline: 7px;
+  border-radius: var(--squid-border-radius-sm);
+  font-size: var(--squid-font-size-sm);
+}
+
+.squid-input-affix-wrapper-disabled {
+  background: var(--squid-color-bg-container-disabled);
+  border-color: var(--squid-color-border-secondary);
+  color: var(--squid-color-text-disabled);
+  cursor: not-allowed;
+}
+
+.squid-input-affix-wrapper-disabled:hover {
+  border-color: var(--squid-color-border-secondary);
+}
+
+.squid-input-affix-wrapper-borderless.squid-input-affix-wrapper-disabled,
+.squid-input-affix-wrapper-underlined.squid-input-affix-wrapper-disabled {
+  background: transparent;
+}
+
+.squid-input-prefix {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--squid-color-text-tertiary);
+  flex: 0 0 auto;
+}
+
+.squid-input-affix-wrapper-error .squid-input-prefix {
+  color: var(--squid-color-danger);
+}
+
+.squid-input-affix-wrapper-warning .squid-input-prefix {
+  color: var(--squid-color-warning);
+}
+
+.squid-input {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+.squid-input::placeholder {
+  color: var(--squid-color-text-placeholder);
+}
+
+.squid-input:disabled {
+  cursor: not-allowed;
+}
+
+.squid-input::-ms-reveal,
+.squid-input::-ms-clear {
+  display: none;
+}
+
+.squid-input::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+.squid-input-count {
+  flex: 0 0 auto;
+  color: var(--squid-color-text-tertiary);
+  font-size: var(--squid-font-size-sm);
+  line-height: var(--squid-line-height-sm);
+}
+
+.squid-input-password-toggle {
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--squid-color-text-tertiary);
+  font: inherit;
+  font-size: var(--squid-font-size-sm);
+  line-height: var(--squid-line-height-sm);
+  cursor: pointer;
+}
+
+.squid-input-password-toggle:hover {
+  color: var(--squid-color-text-secondary);
+}
+
+.squid-input-password-toggle:disabled {
+  color: var(--squid-color-text-disabled);
+  cursor: not-allowed;
+}
+
+.squid-input-affix-wrapper-error .squid-input-password-toggle {
+  color: var(--squid-color-danger);
+}
+
+.squid-input-affix-wrapper-warning .squid-input-password-toggle {
+  color: var(--squid-color-warning);
+}

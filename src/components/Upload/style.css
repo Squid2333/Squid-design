@@ -1,0 +1,161 @@
+.squid-upload {
+  display: flex;
+  flex-direction: column;
+  gap: var(--squid-padding-md);
+}
+
+.squid-upload-input {
+  display: none;
+}
+
+.squid-upload-trigger {
+  display: inline-flex;
+  align-items: center;
+}
+
+.squid-upload-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--squid-padding-sm);
+}
+
+.squid-upload-list-item {
+  padding: var(--squid-padding-md);
+  border: 1px solid var(--squid-color-border-secondary);
+  border-radius: var(--squid-border-radius-base);
+  background: var(--squid-color-bg-container);
+}
+
+.squid-upload-list-row {
+  display: flex;
+  align-items: center;
+  gap: var(--squid-padding-md);
+}
+
+.squid-upload-thumbnail {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--squid-border-radius-sm);
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+
+.squid-upload-thumbnail-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--squid-color-fill-quaternary);
+  color: var(--squid-color-text-tertiary);
+  font-size: var(--squid-font-size-sm);
+}
+
+.squid-upload-list-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  gap: var(--squid-padding-md);
+}
+
+.squid-upload-file-name {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--squid-color-text);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.squid-upload-file-status {
+  flex: 0 0 auto;
+  color: var(--squid-color-text-tertiary);
+  font-size: var(--squid-font-size-sm);
+}
+
+.squid-upload-file-status-uploading {
+  color: var(--squid-color-primary);
+}
+
+.squid-upload-file-status-done {
+  color: var(--squid-color-success);
+}
+
+.squid-upload-file-status-error {
+  color: var(--squid-color-danger);
+}
+
+.squid-upload-progress {
+  height: 6px;
+  margin-top: var(--squid-padding-sm);
+  border-radius: 999px;
+  background: var(--squid-color-fill-quaternary);
+  overflow: hidden;
+}
+
+.squid-upload-progress-bar {
+  height: 100%;
+  background: var(--squid-color-primary);
+  transition: width var(--squid-motion-duration-fast);
+}
+
+.squid-upload-error {
+  margin-top: var(--squid-padding-xs);
+  color: var(--squid-color-danger);
+  font-size: var(--squid-font-size-sm);
+}
+
+.squid-upload-remove {
+  margin-top: var(--squid-padding-sm);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--squid-color-primary);
+  font: inherit;
+  cursor: pointer;
+}
+
+.squid-upload-remove:hover {
+  color: var(--squid-color-primary-hover);
+}
+
+.squid-upload-dragger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--squid-padding-sm);
+  min-height: 180px;
+  padding: 24px;
+  border: 1px dashed var(--squid-color-border);
+  border-radius: var(--squid-border-radius-lg);
+  background: var(--squid-color-fill-quaternary);
+  color: var(--squid-color-text);
+  text-align: center;
+  cursor: pointer;
+  transition:
+    border-color var(--squid-motion-duration-fast),
+    background-color var(--squid-motion-duration-fast);
+}
+
+.squid-upload-dragger:hover,
+.squid-upload-dragger-dragover {
+  border-color: var(--squid-color-primary);
+  background: var(--squid-color-info-bg);
+}
+
+.squid-upload-dragger-icon {
+  color: var(--squid-color-primary);
+  line-height: 0;
+}
+
+.squid-upload-dragger-title {
+  color: var(--squid-color-text);
+  font-size: var(--squid-font-size-lg);
+  line-height: var(--squid-line-height-lg);
+  font-weight: var(--squid-font-weight-medium);
+}
+
+.squid-upload-dragger-description {
+  color: var(--squid-color-text-secondary);
+  font-size: var(--squid-font-size-base);
+  line-height: var(--squid-line-height-base);
+}

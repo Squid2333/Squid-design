@@ -1,0 +1,94 @@
+.squid-modal-root {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+.squid-modal-mask {
+  position: absolute;
+  inset: 0;
+}
+
+.squid-modal-mask-dimmed {
+  background: var(--squid-color-bg-mask);
+}
+
+.squid-modal-mask-blur {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+.squid-modal-mask-none {
+  background: transparent;
+}
+
+.squid-modal-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+  padding: 16px;
+}
+
+.squid-modal-wrap-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+.squid-modal {
+  position: relative;
+  max-width: calc(100vw - 32px);
+  margin: 0 auto;
+  border-radius: var(--squid-border-radius-lg);
+  background: var(--squid-color-bg-elevated);
+  box-shadow: var(--squid-box-shadow-base);
+}
+
+.squid-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--squid-padding-md);
+  padding: var(--squid-padding-lg) 24px var(--squid-padding-md);
+}
+
+.squid-modal-title {
+  color: var(--squid-color-text-heading);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: var(--squid-font-weight-strong);
+}
+
+.squid-modal-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--squid-border-radius-sm);
+  background: transparent;
+  color: var(--squid-color-icon);
+  cursor: pointer;
+}
+
+.squid-modal-close:hover {
+  background: var(--squid-color-fill-quaternary);
+  color: var(--squid-color-icon-hover);
+}
+
+.squid-modal-body {
+  padding: 0 24px 24px;
+  color: var(--squid-color-text);
+  font-size: var(--squid-font-size-base);
+  line-height: var(--squid-line-height-base);
+}
+
+.squid-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--squid-padding-sm);
+  padding: 0 24px 24px;
+}

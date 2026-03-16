@@ -1,0 +1,278 @@
+.squid-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--squid-padding-xs);
+  padding: 4px 15px;
+  border: 1px solid transparent;
+  border-radius: var(--squid-border-radius-base);
+  background: var(--squid-color-bg-container);
+  color: var(--squid-color-text);
+  font: inherit;
+  font-size: var(--squid-font-size-base);
+  line-height: 1.5715;
+  font-weight: var(--squid-font-weight-normal);
+  cursor: pointer;
+  transition:
+    color var(--squid-motion-duration-fast),
+    background-color var(--squid-motion-duration-fast),
+    border-color var(--squid-motion-duration-fast),
+    box-shadow var(--squid-motion-duration-fast);
+}
+
+.squid-btn-block {
+  display: flex;
+  width: 100%;
+}
+
+.squid-btn-spinner {
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  animation: squid-btn-spin 0.6s linear infinite;
+}
+
+.squid-btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+@keyframes squid-btn-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.squid-btn-large {
+  height: 40px;
+  padding: 8px 15px;
+  font-size: var(--squid-font-size-lg);
+}
+
+.squid-btn-medium {
+  height: 32px;
+  padding: 4px 15px;
+  font-size: var(--squid-font-size-base);
+}
+
+.squid-btn-small {
+  height: 24px;
+  padding: 0 7px;
+  font-size: var(--squid-font-size-sm);
+  line-height: 1;
+  border-radius: var(--squid-border-radius-sm);
+}
+
+.squid-btn-circle {
+  padding-inline: 0;
+  border-radius: 50%;
+}
+
+.squid-btn-circle.squid-btn-large {
+  width: 40px;
+}
+
+.squid-btn-circle.squid-btn-medium {
+  width: 32px;
+}
+
+.squid-btn-circle.squid-btn-small {
+  width: 24px;
+}
+
+.squid-btn:hover {
+  border-color: var(--squid-color-primary-hover);
+  color: var(--squid-color-primary-hover);
+}
+
+.squid-btn:active {
+  border-color: var(--squid-color-primary-active);
+  color: var(--squid-color-primary-active);
+}
+
+.squid-btn-outlined {
+  background: var(--squid-color-bg-container);
+  border-color: var(--squid-color-border);
+}
+
+.squid-btn-dashed {
+  background: var(--squid-color-bg-container);
+  border-color: var(--squid-color-border);
+  border-style: dashed;
+}
+
+.squid-btn-text,
+.squid-btn-link {
+  padding-inline: var(--squid-padding-xs);
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+.squid-btn-text.squid-btn-large,
+.squid-btn-link.squid-btn-large {
+  padding-inline: var(--squid-padding-sm);
+}
+
+.squid-btn-text.squid-btn-small,
+.squid-btn-link.squid-btn-small {
+  padding-inline: var(--squid-padding-xs);
+}
+
+.squid-btn-circle.squid-btn-text,
+.squid-btn-circle.squid-btn-link {
+  padding-inline: 0;
+}
+
+.squid-btn-text:hover,
+.squid-btn-link:hover {
+  border-color: transparent;
+}
+
+.squid-btn-text:active,
+.squid-btn-link:active {
+  border-color: transparent;
+}
+
+.squid-btn-solid.squid-btn-primary {
+  background: var(--squid-color-primary);
+  border-color: var(--squid-color-primary);
+  color: var(--squid-color-text-light-solid);
+}
+
+.squid-btn-solid.squid-btn-primary:hover {
+  background: var(--squid-color-primary-hover);
+  border-color: var(--squid-color-primary-hover);
+  color: var(--squid-color-text-light-solid);
+}
+
+.squid-btn-solid.squid-btn-primary:active {
+  background: var(--squid-color-primary-active);
+  border-color: var(--squid-color-primary-active);
+  color: var(--squid-color-text-light-solid);
+}
+
+.squid-btn-solid.squid-btn-danger {
+  background: var(--squid-color-danger);
+  border-color: var(--squid-color-danger);
+  color: var(--squid-color-text-light-solid);
+}
+
+.squid-btn-solid.squid-btn-danger:hover {
+  background: var(--squid-color-danger-hover);
+  border-color: var(--squid-color-danger-hover);
+  color: var(--squid-color-text-light-solid);
+}
+
+.squid-btn-solid.squid-btn-danger:active {
+  background: var(--squid-color-danger-active);
+  border-color: var(--squid-color-danger-active);
+  color: var(--squid-color-text-light-solid);
+}
+
+.squid-btn-outlined.squid-btn-primary,
+.squid-btn-dashed.squid-btn-primary,
+.squid-btn-text.squid-btn-primary,
+.squid-btn-link.squid-btn-primary {
+  color: var(--squid-color-primary);
+}
+
+.squid-btn-outlined.squid-btn-primary,
+.squid-btn-dashed.squid-btn-primary {
+  border-color: var(--squid-color-primary);
+}
+
+.squid-btn-outlined.squid-btn-danger,
+.squid-btn-dashed.squid-btn-danger,
+.squid-btn-text.squid-btn-danger,
+.squid-btn-link.squid-btn-danger {
+  color: var(--squid-color-danger);
+}
+
+.squid-btn-outlined.squid-btn-danger,
+.squid-btn-dashed.squid-btn-danger {
+  border-color: var(--squid-color-danger);
+}
+
+.squid-btn-link {
+  text-decoration: none;
+}
+
+.squid-btn-text:hover {
+  background: var(--squid-color-fill-tertiary);
+  color: var(--squid-color-text-secondary);
+}
+
+.squid-btn-text:active {
+  background: var(--squid-color-fill-secondary);
+  color: var(--squid-color-text);
+}
+
+.squid-btn-link:hover {
+  background: transparent;
+  color: var(--squid-color-primary-hover);
+  text-decoration: underline;
+}
+
+.squid-btn-link:active {
+  background: transparent;
+}
+
+.squid-btn-link.squid-btn-danger:hover {
+  color: var(--squid-color-danger-hover);
+}
+
+.squid-btn-link.squid-btn-danger:active {
+  color: var(--squid-color-danger-active);
+}
+
+.squid-btn-text.squid-btn-primary:hover {
+  color: var(--squid-color-primary-hover);
+}
+
+.squid-btn-text.squid-btn-primary:active {
+  color: var(--squid-color-primary-active);
+}
+
+.squid-btn-text.squid-btn-danger:hover {
+  color: var(--squid-color-danger-hover);
+}
+
+.squid-btn-text.squid-btn-danger:active {
+  color: var(--squid-color-danger-active);
+}
+
+.squid-btn-disabled,
+.squid-btn:disabled {
+  background: var(--squid-color-bg-container-disabled);
+  border-color: var(--squid-color-border-secondary);
+  color: var(--squid-color-text-disabled);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.squid-btn-text.squid-btn-disabled,
+.squid-btn-link.squid-btn-disabled,
+.squid-btn-text:disabled,
+.squid-btn-link:disabled {
+  background: transparent;
+  border-color: transparent;
+}
+
+.squid-btn-disabled:hover,
+.squid-btn-disabled:active,
+.squid-btn:disabled:hover,
+.squid-btn:disabled:active {
+  background: var(--squid-color-bg-container-disabled);
+  border-color: var(--squid-color-border-secondary);
+  color: var(--squid-color-text-disabled);
+}
+
+.squid-btn-loading {
+  pointer-events: none;
+}

@@ -1,0 +1,47 @@
+.squid-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--squid-padding-lg);
+}
+
+.squid-form-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--squid-padding-xs);
+}
+
+.squid-form-item-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--squid-color-text);
+  font-size: var(--squid-font-size-base);
+  line-height: var(--squid-line-height-base);
+  font-weight: var(--squid-font-weight-medium);
+}
+
+.squid-form-item-required {
+  color: var(--squid-color-danger);
+}
+
+.squid-form-item-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.squid-form-item-explain {
+  color: var(--squid-color-danger);
+  font-size: var(--squid-font-size-sm);
+  line-height: var(--squid-line-height-sm);
+}
+
+.squid-form-item-extra {
+  color: var(--squid-color-text-secondary);
+  font-size: var(--squid-font-size-sm);
+  line-height: var(--squid-line-height-sm);
+}
+
+.squid-form-actions {
+  display: flex;
+  gap: var(--squid-padding-sm);
+}

@@ -254,7 +254,6 @@ export function useUploadController({
 
     for (const file of validFiles) {
       // Sequential updates keep list ordering stable and avoid stale closures.
-      // eslint-disable-next-line no-await-in-loop
       await processFile(file, validFiles);
     }
   }

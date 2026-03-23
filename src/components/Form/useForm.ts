@@ -1,10 +1,10 @@
 import { useState } from "react";
-import type { FormInstance, Store } from "./interface";
+import type { FormInstance, NamePath, Store } from "./interface";
 
 type FormApi = {
-  getFieldValue: (name: string) => unknown;
+  getFieldValue: (name: NamePath) => unknown;
   getFieldsValue: () => Store;
-  setFieldValue: (name: string, value: unknown) => void;
+  setFieldValue: (name: NamePath, value: unknown) => void;
   setFieldsValue: (values: Store) => void;
   resetFields: () => void;
   submit: () => void;

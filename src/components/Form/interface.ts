@@ -2,6 +2,15 @@ import type { ReactNode } from "react";
 
 export type Store = Record<string, unknown>;
 export type FieldErrors = Record<string, string[]>;
+export type ValidateTrigger = string | string[];
+export type NameSegment = string | number;
+export type NamePath = NameSegment | NameSegment[];
+
+export type FieldMeta = {
+  dirty: boolean;
+  touched: boolean;
+  validating: boolean;
+};
 
 export type Rule = {
   required?: boolean;
@@ -13,9 +22,9 @@ export type Rule = {
 };
 
 export type FormInstance = {
-  getFieldValue: (name: string) => unknown;
+  getFieldValue: (name: NamePath) => unknown;
   getFieldsValue: () => Store;
-  setFieldValue: (name: string, value: unknown) => void;
+  setFieldValue: (name: NamePath, value: unknown) => void;
   setFieldsValue: (values: Store) => void;
   resetFields: () => void;
   validateFields: () => Promise<Store>;
@@ -36,9 +45,10 @@ export type FormItemProps = {
   getValueFromEvent?: (...args: unknown[]) => unknown;
   help?: ReactNode;
   label?: ReactNode;
-  name?: string;
+  name?: NamePath;
   required?: boolean;
   rules?: Rule[];
   trigger?: string;
+  validateTrigger?: ValidateTrigger;
   valuePropName?: string;
 };

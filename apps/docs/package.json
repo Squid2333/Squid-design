@@ -1,0 +1,25 @@
+{
+  "name": "@squid-design/docs",
+  "private": true,
+  "version": "0.0.1",
+  "description": "docs for squid-design",
+  "scripts": {
+    "start": "pnpm dev",
+    "dev": "dumi dev",
+    "build": "dumi build",
+    "preview": "dumi preview",
+    "prepare": "dumi setup"
+  },
+  "authors": [
+    "Squid2333"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@squid-design/ui": "workspace:*",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "dumi": "^2.4.21"
+  }
+}

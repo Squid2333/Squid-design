@@ -1,73 +1,89 @@
-# React + TypeScript + Vite
+# Squid Design
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+一个基于 React 构建的组件库项目，当前采用 `pnpm workspace` 管理组件主包与文档站，围绕中后台与通用业务场景沉淀基础组件、设计 token 与文档体系。
 
-Currently, two official plugins are available:
+## 当前能力
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 组件库主包：`packages/ui`
+- 文档站：`apps/docs`，基于 dumi
+- 组件展示与交互验证：Storybook
+- 主题基础：全局 token + dark mode token
+- 引入方式：支持完整引入与组件子路径引入
 
-## React Compiler
+当前已经实现的核心组件包括：
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `Button`
+- `Input`
+- `Select`
+- `Modal`
+- `Table`
+- `Form`
+- `Upload`
+- `Typography`
 
-## Expanding the ESLint configuration
+## 目录结构
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```txt
+squid-design/
+├── apps/
+│   └── docs/          # dumi 文档站
+├── packages/
+│   └── ui/            # React 组件库主包
+├── package.json       # workspace root
+├── pnpm-workspace.yaml
+└── tsconfig.base.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 技术栈
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React
+- TypeScript
+- Vite
+- Storybook
+- dumi
+- pnpm workspace
+- ESLint
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 开发命令
+
+在仓库根目录执行：
+
+```bash
+pnpm install
+```
+
+启动组件开发环境：
+
+```bash
+pnpm dev:ui
+```
+
+启动文档站：
+
+```bash
+pnpm dev:docs
+```
+
+启动 Storybook：
+
+```bash
+pnpm storybook
+```
+
+构建整个仓库：
+
+```bash
+pnpm build
+```
+
+单独构建文档站：
+
+```bash
+pnpm build:docs
+```
+
+代码检查：
+
+```bash
+pnpm lint
 ```

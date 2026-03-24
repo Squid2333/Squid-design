@@ -123,4 +123,85 @@
   --squid-color-info-active: #0958d9;
   --squid-color-info-bg: #e6f4ff;
   --squid-color-info-border: #91caff;
+
+  /* ========= Theme Helpers ========= */
+  --squid-color-focus-ring: rgba(5, 145, 255, 0.1);
+  --squid-color-bg-mask-blur: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"],
+[data-prefers-color="dark"] {
+  /* ========= Color: Brand ========= */
+  --squid-color-primary: #4096ff;
+  --squid-color-primary-hover: #69b1ff;
+  --squid-color-primary-active: #1677ff;
+
+  /* ========= Color: Text ========= */
+  --squid-color-text: rgba(255, 255, 255, 0.88);
+  --squid-color-text-secondary: rgba(255, 255, 255, 0.65);
+  --squid-color-text-tertiary: rgba(255, 255, 255, 0.45);
+  --squid-color-text-quaternary: rgba(255, 255, 255, 0.25);
+  --squid-color-text-disabled: rgba(255, 255, 255, 0.25);
+  --squid-color-text-placeholder: rgba(255, 255, 255, 0.25);
+  --squid-color-text-light-solid: #ffffff;
+  --squid-color-text-heading: rgba(255, 255, 255, 0.88);
+
+  /* ========= Color: Background ========= */
+  --squid-color-bg-container: #141414;
+  --squid-color-bg-elevated: #1f1f1f;
+  --squid-color-bg-layout: #000000;
+  --squid-color-bg-mask: rgba(0, 0, 0, 0.65);
+  --squid-color-bg-spotlight: rgba(255, 255, 255, 0.2);
+  --squid-color-bg-container-disabled: rgba(255, 255, 255, 0.08);
+
+  /* ========= Color: Border ========= */
+  --squid-color-border: #434343;
+  --squid-color-border-secondary: #303030;
+  --squid-color-split: rgba(255, 255, 255, 0.12);
+
+  /* ========= Color: Fill ========= */
+  --squid-color-fill: rgba(255, 255, 255, 0.18);
+  --squid-color-fill-secondary: rgba(255, 255, 255, 0.12);
+  --squid-color-fill-tertiary: rgba(255, 255, 255, 0.08);
+  --squid-color-fill-quaternary: rgba(255, 255, 255, 0.04);
+  --squid-color-fill-content: rgba(255, 255, 255, 0.12);
+  --squid-color-fill-content-hover: rgba(255, 255, 255, 0.18);
+
+  /* ========= Color: Icon ========= */
+  --squid-color-icon: rgba(255, 255, 255, 0.45);
+  --squid-color-icon-hover: rgba(255, 255, 255, 0.88);
+
+  /* ========= Shadow ========= */
+  --squid-box-shadow-sm: 0 6px 16px rgba(0, 0, 0, 0.32);
+  --squid-box-shadow-base: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --squid-box-shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.48);
+
+  /* ========= Semantic Colors ========= */
+  --squid-color-success: #49aa19;
+  --squid-color-success-hover: #6abe39;
+  --squid-color-success-active: #3c8618;
+  --squid-color-success-bg: rgba(73, 170, 25, 0.16);
+  --squid-color-success-border: rgba(73, 170, 25, 0.4);
+
+  --squid-color-warning: #d89614;
+  --squid-color-warning-hover: #e8b339;
+  --squid-color-warning-active: #ad6800;
+  --squid-color-warning-bg: rgba(216, 150, 20, 0.16);
+  --squid-color-warning-border: rgba(216, 150, 20, 0.4);
+
+  --squid-color-danger: #dc4446;
+  --squid-color-danger-hover: #ff7875;
+  --squid-color-danger-active: #ff4d4f;
+  --squid-color-danger-bg: rgba(220, 68, 70, 0.16);
+  --squid-color-danger-border: rgba(220, 68, 70, 0.4);
+
+  --squid-color-info: #4096ff;
+  --squid-color-info-hover: #69b1ff;
+  --squid-color-info-active: #1677ff;
+  --squid-color-info-bg: rgba(64, 150, 255, 0.16);
+  --squid-color-info-border: rgba(64, 150, 255, 0.4);
+
+  /* ========= Theme Helpers ========= */
+  --squid-color-focus-ring: rgba(64, 150, 255, 0.18);
+  --squid-color-bg-mask-blur: rgba(0, 0, 0, 0.4);
 }

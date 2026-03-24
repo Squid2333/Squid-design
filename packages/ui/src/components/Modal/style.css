@@ -14,7 +14,7 @@
 }
 
 .squid-modal-mask-blur {
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--squid-color-bg-mask-blur);
   backdrop-filter: blur(8px);
 }
 

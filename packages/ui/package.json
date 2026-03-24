@@ -8,6 +8,14 @@
   "types": "./src/index.ts",
   "exports": {
     ".": "./src/index.ts",
+    "./button": "./src/components/Button/index.ts",
+    "./form": "./src/components/Form/index.ts",
+    "./input": "./src/components/Input/index.ts",
+    "./modal": "./src/components/Modal/index.ts",
+    "./select": "./src/components/Select/index.ts",
+    "./table": "./src/components/Table/index.ts",
+    "./typography": "./src/components/Typography/index.ts",
+    "./upload": "./src/components/Upload/index.ts",
     "./styles/global.css": "./src/styles/global.css"
   },
   "scripts": {

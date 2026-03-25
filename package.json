@@ -1,14 +1,24 @@
 {
   "name": "squid-design-workspace",
   "private": true,
+  "type": "module",
   "packageManager": "pnpm@10.12.1",
   "scripts": {
     "build": "pnpm -r build",
     "lint": "pnpm -r lint",
     "dev:ui": "pnpm --filter @squid-design/ui dev",
     "dev:docs": "pnpm --filter @squid-design/docs dev",
-    "storybook": "pnpm --filter @squid-design/ui storybook",
-    "build-storybook": "pnpm --filter @squid-design/ui build-storybook",
+    "storybook": "pnpm --filter @squid-design/storybook storybook",
+    "build-storybook": "pnpm --filter @squid-design/storybook build-storybook",
     "build:docs": "pnpm --filter @squid-design/docs build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "eslint-plugin-storybook": "^10.2.19",
+    "globals": "^17.4.0",
+    "typescript-eslint": "^8.56.1"
   }
 }

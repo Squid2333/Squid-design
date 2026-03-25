@@ -6,7 +6,29 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    devDependencies:
+      '@eslint/js':
+        specifier: ^9.39.4
+        version: 9.39.4
+      eslint:
+        specifier: ^9.39.4
+        version: 9.39.4(jiti@2.6.1)
+      eslint-plugin-react-hooks:
+        specifier: ^7.0.1
+        version: 7.0.1(eslint@9.39.4(jiti@2.6.1))
+      eslint-plugin-react-refresh:
+        specifier: ^0.5.2
+        version: 0.5.2(eslint@9.39.4(jiti@2.6.1))
+      eslint-plugin-storybook:
+        specifier: ^10.2.19
+        version: 10.3.2(eslint@9.39.4(jiti@2.6.1))(storybook@10.3.2(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3)
+      globals:
+        specifier: ^17.4.0
+        version: 17.4.0
+      typescript-eslint:
+        specifier: ^8.56.1
+        version: 8.57.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)
 
   apps/docs:
     dependencies:
@@ -24,11 +46,11 @@ importers:
         specifier: ^2.4.21
         version: 2.4.23(@babel/core@7.29.0)(@swc/helpers@0.5.15)(@types/node@24.12.0)(@types/react@19.2.14)(eslint@9.39.4(jiti@2.6.1))(lightningcss@1.32.0)(prettier@2.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(resolve-url-loader@5.0.0)(rollup@3.30.0)(styled-jsx@5.1.7(@babel/core@7.29.0)(react@19.2.4))(stylelint@14.16.1)(terser@5.46.1)(type-fest@0.18.1)(typescript@5.9.3)(webpack@5.105.4)
 
-  packages/ui:
+  apps/storybook:
     dependencies:
-      '@rc-component/upload':
-        specifier: ^1.1.0
-        version: 1.1.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@squid-design/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       react:
         specifier: ^19.2.4
         version: 19.2.4
@@ -39,9 +61,6 @@ importers:
       '@chromatic-com/storybook':
         specifier: ^5.0.1
         version: 5.0.2(storybook@10.3.2(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
-      '@eslint/js':
-        specifier: ^9.39.4
-        version: 9.39.4
       '@storybook/addon-a11y':
         specifier: ^10.2.19
         version: 10.3.2(storybook@10.3.2(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
@@ -54,6 +73,25 @@ importers:
       '@storybook/react-vite':
         specifier: ^10.2.19
         version: 10.3.2(esbuild@0.27.4)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(rollup@3.30.0)(storybook@10.3.2(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3)(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1))(webpack@5.105.4(esbuild@0.27.4))
+      storybook:
+        specifier: ^10.2.19
+        version: 10.3.2(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+
+  packages/ui:
+    dependencies:
+      '@rc-component/upload':
+        specifier: ^1.1.0
+        version: 1.1.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      react:
+        specifier: ^19.2.4
+        version: 19.2.4
+      react-dom:
+        specifier: ^19.2.4
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@eslint/js':
+        specifier: ^9.39.4
+        version: 9.39.4
       '@types/node':
         specifier: ^24.12.0
         version: 24.12.0
@@ -81,18 +119,12 @@ importers:
       eslint-plugin-react-refresh:
         specifier: ^0.5.2
         version: 0.5.2(eslint@9.39.4(jiti@2.6.1))
-      eslint-plugin-storybook:
-        specifier: ^10.2.19
-        version: 10.3.2(eslint@9.39.4(jiti@2.6.1))(storybook@10.3.2(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3)
       globals:
         specifier: ^17.4.0
         version: 17.4.0
       playwright:
         specifier: ^1.58.2
         version: 1.58.2
-      storybook:
-        specifier: ^10.2.19
-        version: 10.3.2(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       typescript:
         specifier: ~5.9.3
         version: 5.9.3

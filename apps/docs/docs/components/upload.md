@@ -99,7 +99,7 @@ export default () => <Dragger multiple />;
 | `accept` | 接受的文件类型 | `string` | `undefined` |
 | `beforeUpload` | 上传前校验 | `(file: File, fileList: File[]) => boolean \| File \| Promise<boolean \| File>` | `undefined` |
 | `children` | 自定义触发区域 | `ReactNode` | `undefined` |
-| `customRequest` | 自定义上传请求 | `(options) => void` | `undefined` |
+| `customRequest` | 自定义上传请求 | `(options: { file: File; onProgress: (percent: number) => void; onSuccess: (response?: unknown) => void; onError: (error: Error) => void }) => void` | `undefined` |
 | `defaultFileList` | 默认文件列表 | `UploadFile[]` | `undefined` |
 | `fileList` | 受控文件列表 | `UploadFile[]` | `undefined` |
 | `multiple` | 是否支持多文件 | `boolean` | `false` |

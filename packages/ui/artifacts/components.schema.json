@@ -1,0 +1,711 @@
+{
+  "generatedAt": "2026-04-10T04:23:24.084Z",
+  "sourceRoot": "src/components",
+  "components": [
+    {
+      "componentName": "Button",
+      "sourceFile": "src/components/Button/Button.tsx",
+      "props": [
+        {
+          "name": "block",
+          "type": "boolean",
+          "resolvedType": "boolean",
+          "required": false,
+          "default": "false",
+          "isEvent": false
+        },
+        {
+          "name": "color",
+          "type": "ButtonColor",
+          "resolvedType": "\"default\" | \"primary\" | \"danger\"",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "htmlType",
+          "type": "NativeButtonType",
+          "resolvedType": "NonNullable<\n  ButtonHTMLAttributes<HTMLButtonElement>[\"type\"]\n>",
+          "required": false,
+          "default": "\"button\"",
+          "isEvent": false
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "resolvedType": "ReactNode",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "resolvedType": "boolean",
+          "required": false,
+          "default": "false",
+          "isEvent": false
+        },
+        {
+          "name": "shape",
+          "type": "ButtonShape",
+          "resolvedType": "\"default\" | \"circle\"",
+          "required": false,
+          "default": "\"default\"",
+          "isEvent": false
+        },
+        {
+          "name": "size",
+          "type": "ButtonSize",
+          "resolvedType": "\"large\" | \"medium\" | \"small\"",
+          "required": false,
+          "default": "\"medium\"",
+          "isEvent": false
+        },
+        {
+          "name": "type",
+          "type": "ButtonType",
+          "resolvedType": "\"primary\" | \"default\" | \"dashed\" | \"text\" | \"link\"",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "variant",
+          "type": "ButtonVariant",
+          "resolvedType": "\"solid\" | \"outlined\" | \"dashed\" | \"text\" | \"link\"",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        }
+      ],
+      "events": [],
+      "exports": {
+        "entryFile": "src/components/Button/index.ts",
+        "defaultExport": {
+          "from": "src/components/Button/Button.tsx"
+        },
+        "namedExports": []
+      }
+    },
+    {
+      "componentName": "Form",
+      "sourceFile": "src/components/Form/Form.tsx",
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "resolvedType": "ReactNode",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "resolvedType": "string",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "form",
+          "type": "FormInstance",
+          "resolvedType": "{\n  getFieldValue: (name: string | number | string | number[]) => unknown;\n  getFieldsValue: () => Record<string, unknown>;\n  setFieldValue: (name: string | number | string | number[], value: unknown) => void;\n  setFieldsValue: (values: Record<string, unknown>) => void;\n  resetFields: () => void;\n  validateFields: () => Promise<Record<string, unknown>>;\n  submit: () => void;\n}",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "initialValues",
+          "type": "Store",
+          "resolvedType": "Record<string, unknown>",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "onFinish",
+          "type": "(values: Store) => void",
+          "resolvedType": "(values: Record<string, unknown>) => void",
+          "required": false,
+          "default": null,
+          "isEvent": true
+        },
+        {
+          "name": "onFinishFailed",
+          "type": "(errors: FieldErrors, values: Store) => void",
+          "resolvedType": "(errors: Record<string, string[]>, values: Record<string, unknown>) => void",
+          "required": false,
+          "default": null,
+          "isEvent": true
+        }
+      ],
+      "events": [
+        "onFinish",
+        "onFinishFailed"
+      ],
+      "exports": {
+        "entryFile": "src/components/Form/index.ts",
+        "defaultExport": {
+          "from": "src/components/Form/Form.tsx"
+        },
+        "namedExports": [
+          {
+            "name": "FieldErrors",
+            "from": "src/components/Form/interface.ts",
+            "isTypeOnly": true
+          },
+          {
+            "name": "FormInstance",
+            "from": "src/components/Form/interface.ts",
+            "isTypeOnly": true
+          },
+          {
+            "name": "FormItemProps",
+            "from": "src/components/Form/interface.ts",
+            "isTypeOnly": true
+          },
+          {
+            "name": "FormProps",
+            "from": "src/components/Form/interface.ts",
+            "isTypeOnly": true
+          },
+          {
+            "name": "Rule",
+            "from": "src/components/Form/interface.ts",
+            "isTypeOnly": true
+          },
+          {
+            "name": "useForm",
+            "from": "src/components/Form/useForm.ts",
+            "isTypeOnly": false
+          }
+        ]
+      }
+    },
+    {
+      "componentName": "Input",
+      "sourceFile": "src/components/Input/Input.tsx",
+      "props": [
+        {
+          "name": "password",
+          "type": "boolean",
+          "resolvedType": "boolean",
+          "required": false,
+          "default": "false",
+          "isEvent": false
+        },
+        {
+          "name": "prefix",
+          "type": "ReactNode",
+          "resolvedType": "ReactNode",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "showCount",
+          "type": "boolean",
+          "resolvedType": "boolean",
+          "required": false,
+          "default": "false",
+          "isEvent": false
+        },
+        {
+          "name": "size",
+          "type": "InputSize",
+          "resolvedType": "\"large\" | \"medium\" | \"small\"",
+          "required": false,
+          "default": "\"medium\"",
+          "isEvent": false
+        },
+        {
+          "name": "status",
+          "type": "InputStatus",
+          "resolvedType": "\"error\" | \"warning\"",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "variant",
+          "type": "InputVariant",
+          "resolvedType": "\"outlined\" | \"filled\" | \"borderless\" | \"underlined\"",
+          "required": false,
+          "default": "\"outlined\"",
+          "isEvent": false
+        }
+      ],
+      "events": [],
+      "exports": {
+        "entryFile": "src/components/Input/index.ts",
+        "defaultExport": {
+          "from": "src/components/Input/Input.tsx"
+        },
+        "namedExports": []
+      }
+    },
+    {
+      "componentName": "Modal",
+      "sourceFile": "src/components/Modal/Modal.tsx",
+      "props": [
+        {
+          "name": "cancelText",
+          "type": "ReactNode",
+          "resolvedType": "ReactNode",
+          "required": false,
+          "default": "\"Cancel\"",
+          "isEvent": false
+        },
+        {
+          "name": "centered",
+          "type": "boolean",
+          "resolvedType": "boolean",
+          "required": false,
+          "default": "false",
+          "isEvent": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "resolvedType": "ReactNode",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "closable",
+          "type": "ClosableConfig",
+          "resolvedType": "| boolean\n  | {\n      \"aria-label\"?: string;\n    }",
+          "required": false,
+          "default": "true",
+          "isEvent": false
+        },
+        {
+          "name": "mask",
+          "type": "ModalMask",
+          "resolvedType": "\"blur\" | \"dimmed\" | \"none\"",
+          "required": false,
+          "default": "\"dimmed\"",
+          "isEvent": false
+        },
+        {
+          "name": "okText",
+          "type": "ReactNode",
+          "resolvedType": "ReactNode",
+          "required": false,
+          "default": "\"OK\"",
+          "isEvent": false
+        },
+        {
+          "name": "onCancel",
+          "type": "() => void",
+          "resolvedType": "() => void",
+          "required": false,
+          "default": null,
+          "isEvent": true
+        },
+        {
+          "name": "onOk",
+          "type": "() => void",
+          "resolvedType": "() => void",
+          "required": false,
+          "default": null,
+          "isEvent": true
+        },
+        {
+          "name": "open",
+          "type": "boolean",
+          "resolvedType": "boolean",
+          "required": false,
+          "default": "false",
+          "isEvent": false
+        },
+        {
+          "name": "style",
+          "type": "CSSProperties",
+          "resolvedType": "CSSProperties",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "resolvedType": "ReactNode",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "width",
+          "type": "number | string",
+          "resolvedType": "number | string",
+          "required": false,
+          "default": "520",
+          "isEvent": false
+        }
+      ],
+      "events": [
+        "onCancel",
+        "onOk"
+      ],
+      "exports": {
+        "entryFile": "src/components/Modal/index.ts",
+        "defaultExport": {
+          "from": "src/components/Modal/Modal.tsx"
+        },
+        "namedExports": []
+      }
+    },
+    {
+      "componentName": "Select",
+      "sourceFile": "src/components/Select/Select.tsx",
+      "props": [
+        {
+          "name": "defaultValue",
+          "type": "SelectValue",
+          "resolvedType": "string | string[]",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "resolvedType": "boolean",
+          "required": false,
+          "default": "false",
+          "isEvent": false
+        },
+        {
+          "name": "maxCount",
+          "type": "number",
+          "resolvedType": "number",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "mode",
+          "type": "SelectMode",
+          "resolvedType": "\"multiple\" | \"tags\"",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "onChange",
+          "type": "(value: SelectValue) => void",
+          "resolvedType": "(value: string | string[]) => void",
+          "required": false,
+          "default": null,
+          "isEvent": true
+        },
+        {
+          "name": "options",
+          "type": "SelectOption[]",
+          "resolvedType": "{\n  label: ReactNode;\n  value: string;\n  text?: string;\n  disabled?: boolean;\n}[]",
+          "required": true,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "resolvedType": "string",
+          "required": false,
+          "default": "\"Please select\"",
+          "isEvent": false
+        },
+        {
+          "name": "showSearch",
+          "type": "boolean",
+          "resolvedType": "boolean",
+          "required": false,
+          "default": "false",
+          "isEvent": false
+        },
+        {
+          "name": "size",
+          "type": "SelectSize",
+          "resolvedType": "\"large\" | \"medium\" | \"small\"",
+          "required": false,
+          "default": "\"medium\"",
+          "isEvent": false
+        },
+        {
+          "name": "status",
+          "type": "SelectStatus",
+          "resolvedType": "\"error\" | \"warning\"",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "value",
+          "type": "SelectValue",
+          "resolvedType": "string | string[]",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        }
+      ],
+      "events": [
+        "onChange"
+      ],
+      "exports": {
+        "entryFile": "src/components/Select/index.ts",
+        "defaultExport": {
+          "from": "src/components/Select/Select.tsx"
+        },
+        "namedExports": []
+      }
+    },
+    {
+      "componentName": "Table",
+      "sourceFile": "src/components/Table/Table.tsx",
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "resolvedType": "string",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "columns",
+          "type": "TableColumn<T>[]",
+          "resolvedType": "{\n  title: ReactNode;\n  dataIndex: Extract<keyof T, string | number><T> | string | number | readonly string | number[]<T>;\n  key: Key;\n  align?: \"left\" | \"center\" | \"right\";\n  width?: CSSProperties[\"width\"];\n  ellipsis?: boolean;\n  sortable?: boolean;\n  sorter?: (left: T, right: T) => number;\n  filters?: {\n  text: ReactNode;\n  value: Key;\n}[];\n  filterMultiple?: boolean;\n  onFilter?: (value: Key, record: T) => boolean;\n  render?: (value: unknown, record: T, index: number) => ReactNode;\n}<T>[]",
+          "required": true,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "dataSource",
+          "type": "T[]",
+          "resolvedType": "T[]",
+          "required": true,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "emptyText",
+          "type": "ReactNode",
+          "resolvedType": "ReactNode",
+          "required": false,
+          "default": "\"暂无数据\"",
+          "isEvent": false
+        },
+        {
+          "name": "filterState",
+          "type": "TableFilterState[]",
+          "resolvedType": "{\n  key: Key;\n  values: Key[];\n}[]",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "resolvedType": "boolean",
+          "required": false,
+          "default": "false",
+          "isEvent": false
+        },
+        {
+          "name": "onFilterChange",
+          "type": "(filterState: TableFilterState[]) => void",
+          "resolvedType": "(filterState: {\n  key: Key;\n  values: Key[];\n}[]) => void",
+          "required": false,
+          "default": null,
+          "isEvent": true
+        },
+        {
+          "name": "onSortChange",
+          "type": "(sortState: TableSortState) => void",
+          "resolvedType": "(sortState: {\n  key: Key;\n  order: \"asc\" | \"desc\" | null;\n}) => void",
+          "required": false,
+          "default": null,
+          "isEvent": true
+        },
+        {
+          "name": "pagination",
+          "type": "false | TablePagination",
+          "resolvedType": "false | {\n  current: number;\n  pageSize: number;\n  total: number;\n  pageSizeOptions?: number[];\n  onPageChange?: (page: number, pageSize: number) => void;\n  onPageSizeChange?: (pageSize: number, page: number) => void;\n}",
+          "required": false,
+          "default": "false",
+          "isEvent": false
+        },
+        {
+          "name": "rowKey",
+          "type": "RowKey<T>",
+          "resolvedType": "keyof T | ((record: T) => Key)<T>",
+          "required": true,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "sortState",
+          "type": "TableSortState",
+          "resolvedType": "{\n  key: Key;\n  order: \"asc\" | \"desc\" | null;\n}",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "style",
+          "type": "CSSProperties",
+          "resolvedType": "CSSProperties",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        }
+      ],
+      "events": [
+        "onFilterChange",
+        "onSortChange"
+      ],
+      "exports": {
+        "entryFile": "src/components/Table/index.ts",
+        "defaultExport": {
+          "from": "src/components/Table/Table.tsx"
+        },
+        "namedExports": [
+          {
+            "name": "TableColumn",
+            "from": "src/components/Table/Table.tsx",
+            "isTypeOnly": true
+          },
+          {
+            "name": "TableProps",
+            "from": "src/components/Table/Table.tsx",
+            "isTypeOnly": true
+          }
+        ]
+      }
+    },
+    {
+      "componentName": "Upload",
+      "sourceFile": "src/components/Upload/Upload.tsx",
+      "props": [
+        {
+          "name": "accept",
+          "type": "string",
+          "resolvedType": "string",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "beforeUpload",
+          "type": "BeforeUpload",
+          "resolvedType": "(\n  file: File,\n  fileList: File[],\n) => boolean | File | Promise<boolean | File>",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "resolvedType": "ReactNode",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "customRequest",
+          "type": "(options: CustomRequestOptions) => void",
+          "resolvedType": "(options: {\n  file: File;\n  onProgress: (percent: number) => void;\n  onSuccess: (response?: unknown) => void;\n  onError: (error: Error) => void;\n}) => void",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "defaultFileList",
+          "type": "UploadFile[]",
+          "resolvedType": "{\n  uid: string;\n  name: string;\n  status?: \"uploading\" | \"done\" | \"error\" | \"removed\";\n  percent?: number;\n  originFileObj?: File;\n  response?: unknown;\n  error?: string;\n  thumbUrl?: string;\n}[]",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "fileList",
+          "type": "UploadFile[]",
+          "resolvedType": "{\n  uid: string;\n  name: string;\n  status?: \"uploading\" | \"done\" | \"error\" | \"removed\";\n  percent?: number;\n  originFileObj?: File;\n  response?: unknown;\n  error?: string;\n  thumbUrl?: string;\n}[]",
+          "required": false,
+          "default": null,
+          "isEvent": false
+        },
+        {
+          "name": "multiple",
+          "type": "boolean",
+          "resolvedType": "boolean",
+          "required": false,
+          "default": "false",
+          "isEvent": false
+        },
+        {
+          "name": "onChange",
+          "type": "(fileList: UploadFile[]) => void",
+          "resolvedType": "(fileList: {\n  uid: string;\n  name: string;\n  status?: \"uploading\" | \"done\" | \"error\" | \"removed\";\n  percent?: number;\n  originFileObj?: File;\n  response?: unknown;\n  error?: string;\n  thumbUrl?: string;\n}[]) => void",
+          "required": false,
+          "default": null,
+          "isEvent": true
+        },
+        {
+          "name": "onRemove",
+          "type": "(file: UploadFile) => void | boolean",
+          "resolvedType": "(file: {\n  uid: string;\n  name: string;\n  status?: \"uploading\" | \"done\" | \"error\" | \"removed\";\n  percent?: number;\n  originFileObj?: File;\n  response?: unknown;\n  error?: string;\n  thumbUrl?: string;\n}) => void | boolean",
+          "required": false,
+          "default": null,
+          "isEvent": true
+        }
+      ],
+      "events": [
+        "onChange",
+        "onRemove"
+      ],
+      "exports": {
+        "entryFile": "src/components/Upload/index.ts",
+        "defaultExport": {
+          "from": "src/components/Upload/Upload.tsx"
+        },
+        "namedExports": [
+          {
+            "name": "BeforeUpload",
+            "from": "src/components/Upload/interface.ts",
+            "isTypeOnly": true
+          },
+          {
+            "name": "CustomRequestOptions",
+            "from": "src/components/Upload/interface.ts",
+            "isTypeOnly": true
+          },
+          {
+            "name": "Dragger",
+            "from": "src/components/Upload/Dragger.tsx",
+            "isTypeOnly": false
+          },
+          {
+            "name": "UploadFile",
+            "from": "src/components/Upload/interface.ts",
+            "isTypeOnly": true
+          },
+          {
+            "name": "UploadProps",
+            "from": "src/components/Upload/interface.ts",
+            "isTypeOnly": true
+          },
+          {
+            "name": "UploadStatus",
+            "from": "src/components/Upload/interface.ts",
+            "isTypeOnly": true
+          }
+        ]
+      }
+    }
+  ]
+}

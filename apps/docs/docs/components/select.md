@@ -208,7 +208,7 @@ export default () => (
 
 | 属性名 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| `options` | 选项配置 | `{ label: ReactNode; value: string; text?: string; disabled?: boolean }[]` | `[]` |
+| `options` | 选项配置 | `{ label: ReactNode; value: string; text?: string; disabled?: boolean }[]` | `undefined` |
 | `value` | 当前值 | `string \| string[]` | `undefined` |
 | `defaultValue` | 默认值 | `string \| string[]` | `undefined` |
 | `placeholder` | 占位内容 | `string` | `"Please select"` |

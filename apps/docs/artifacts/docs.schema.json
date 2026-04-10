@@ -1,0 +1,774 @@
+{
+  "generatedAt": "2026-04-10T04:23:24.300Z",
+  "docsRoot": "docs/components",
+  "components": [
+    {
+      "componentName": "Button",
+      "docFile": "docs/components/button.md",
+      "documentedProps": [
+        "block",
+        "className",
+        "color",
+        "disabled",
+        "htmlType",
+        "icon",
+        "loading",
+        "shape",
+        "size",
+        "type",
+        "variant"
+      ],
+      "props": [
+        {
+          "name": "block",
+          "type": "boolean",
+          "default": "false",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "color",
+          "type": "\"default\" \\| \"primary\" \\| \"danger\"",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "htmlType",
+          "type": "\"button\" \\| \"submit\" \\| \"reset\"",
+          "default": "\"button\"",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "default": "false",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "shape",
+          "type": "\"default\" \\| \"circle\"",
+          "default": "\"default\"",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "size",
+          "type": "\"large\" \\| \"medium\" \\| \"small\"",
+          "default": "\"medium\"",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "type",
+          "type": "\"primary\" \\| \"default\" \\| \"dashed\" \\| \"text\" \\| \"link\"",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "variant",
+          "type": "\"solid\" \\| \"outlined\" \\| \"dashed\" \\| \"text\" \\| \"link\"",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        }
+      ]
+    },
+    {
+      "componentName": "Form",
+      "docFile": "docs/components/form.md",
+      "documentedProps": [
+        "children",
+        "className",
+        "form",
+        "help",
+        "initialValues",
+        "label",
+        "mode",
+        "name",
+        "onFinish",
+        "onFinishFailed",
+        "options",
+        "placeholder",
+        "rules",
+        "trigger",
+        "value",
+        "valuePropName"
+      ],
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "form",
+          "type": "FormInstance",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "help",
+          "type": null,
+          "default": null,
+          "required": null,
+          "source": "example"
+        },
+        {
+          "name": "initialValues",
+          "type": "Store",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "label",
+          "type": null,
+          "default": null,
+          "required": null,
+          "source": "example"
+        },
+        {
+          "name": "mode",
+          "type": null,
+          "default": null,
+          "required": null,
+          "source": "example"
+        },
+        {
+          "name": "name",
+          "type": null,
+          "default": null,
+          "required": null,
+          "source": "example"
+        },
+        {
+          "name": "onFinish",
+          "type": "(values: Store) => void",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "onFinishFailed",
+          "type": "(errors: FieldErrors, values: Store) => void",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "options",
+          "type": null,
+          "default": null,
+          "required": null,
+          "source": "example"
+        },
+        {
+          "name": "placeholder",
+          "type": null,
+          "default": null,
+          "required": null,
+          "source": "example"
+        },
+        {
+          "name": "rules",
+          "type": null,
+          "default": null,
+          "required": null,
+          "source": "example"
+        },
+        {
+          "name": "trigger",
+          "type": null,
+          "default": null,
+          "required": null,
+          "source": "example"
+        },
+        {
+          "name": "value",
+          "type": null,
+          "default": null,
+          "required": null,
+          "source": "text"
+        },
+        {
+          "name": "valuePropName",
+          "type": null,
+          "default": null,
+          "required": null,
+          "source": "example"
+        }
+      ]
+    },
+    {
+      "componentName": "Input",
+      "docFile": "docs/components/input.md",
+      "documentedProps": [
+        "className",
+        "defaultValue",
+        "disabled",
+        "maxLength",
+        "password",
+        "placeholder",
+        "prefix",
+        "showCount",
+        "size",
+        "status",
+        "value",
+        "variant"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "maxLength",
+          "type": "number",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "password",
+          "type": "boolean",
+          "default": "false",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "prefix",
+          "type": "ReactNode",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "showCount",
+          "type": "boolean",
+          "default": "false",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "size",
+          "type": "\"large\" \\| \"medium\" \\| \"small\"",
+          "default": "\"medium\"",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "status",
+          "type": "\"warning\" \\| \"error\"",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "variant",
+          "type": "\"outlined\" \\| \"filled\" \\| \"borderless\" \\| \"underlined\"",
+          "default": "\"outlined\"",
+          "required": null,
+          "source": "api_table"
+        }
+      ]
+    },
+    {
+      "componentName": "Modal",
+      "docFile": "docs/components/modal.md",
+      "documentedProps": [
+        "button",
+        "by",
+        "cancelText",
+        "centered",
+        "children",
+        "closable",
+        "close",
+        "controlled",
+        "is",
+        "mask",
+        "okText",
+        "onCancel",
+        "onOk",
+        "open",
+        "style",
+        "the",
+        "title",
+        "width"
+      ],
+      "props": [
+        {
+          "name": "button",
+          "type": null,
+          "default": null,
+          "required": null,
+          "source": "example"
+        },
+        {
+          "name": "by",
+          "type": null,
+          "default": null,
+          "required": null,
+          "source": "example"
+        },
+        {
+          "name": "cancelText",
+          "type": "ReactNode",
+          "default": "\"Cancel\"",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "centered",
+          "type": "boolean",
+          "default": "false",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "closable",
+          "type": "boolean \\| { \"aria-label\"?: string }",
+          "default": "true",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "close",
+          "type": null,
+          "default": null,
+          "required": null,
+          "source": "example"
+        },
+        {
+          "name": "controlled",
+          "type": null,
+          "default": null,
+          "required": null,
+          "source": "example"
+        },
+        {
+          "name": "is",
+          "type": null,
+          "default": null,
+          "required": null,
+          "source": "example"
+        },
+        {
+          "name": "mask",
+          "type": "\"blur\" \\| \"dimmed\" \\| \"none\"",
+          "default": "\"dimmed\"",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "okText",
+          "type": "ReactNode",
+          "default": "\"OK\"",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "onCancel",
+          "type": "() => void",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "onOk",
+          "type": "() => void",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "open",
+          "type": "boolean",
+          "default": "false",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "style",
+          "type": "CSSProperties",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "the",
+          "type": null,
+          "default": null,
+          "required": null,
+          "source": "example"
+        },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "width",
+          "type": "number \\| string",
+          "default": "520",
+          "required": null,
+          "source": "api_table"
+        }
+      ]
+    },
+    {
+      "componentName": "Select",
+      "docFile": "docs/components/select.md",
+      "documentedProps": [
+        "defaultValue",
+        "disabled",
+        "maxCount",
+        "mode",
+        "onChange",
+        "options",
+        "placeholder",
+        "showSearch",
+        "size",
+        "status",
+        "value"
+      ],
+      "props": [
+        {
+          "name": "defaultValue",
+          "type": "string \\| string[]",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "maxCount",
+          "type": "number",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "mode",
+          "type": "\"multiple\" \\| \"tags\"",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "onChange",
+          "type": "(value: string \\| string[]) => void",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "options",
+          "type": "{ label: ReactNode; value: string; text?: string; disabled?: boolean }[]",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "default": "\"Please select\"",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "showSearch",
+          "type": "boolean",
+          "default": "false",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "size",
+          "type": "\"large\" \\| \"medium\" \\| \"small\"",
+          "default": "\"medium\"",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "status",
+          "type": "\"error\" \\| \"warning\"",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "value",
+          "type": "string \\| string[]",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        }
+      ]
+    },
+    {
+      "componentName": "Table",
+      "docFile": "docs/components/table.md",
+      "documentedProps": [
+        "className",
+        "columns",
+        "dataSource",
+        "emptyText",
+        "filterState",
+        "loading",
+        "onFilterChange",
+        "onSortChange",
+        "pagination",
+        "rowKey",
+        "sortState",
+        "style"
+      ],
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "columns",
+          "type": "TableColumn<T>[]",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "dataSource",
+          "type": "T[]",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "emptyText",
+          "type": "ReactNode",
+          "default": "\"暂无数据\"",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "filterState",
+          "type": "TableFilterState[]",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "default": "false",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "onFilterChange",
+          "type": "(filterState: TableFilterState[]) => void",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "onSortChange",
+          "type": "(sortState: TableSortState) => void",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "pagination",
+          "type": "false \\| TablePagination",
+          "default": "false",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "rowKey",
+          "type": "keyof T \\| (record: T) => Key",
+          "default": "-",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "sortState",
+          "type": "TableSortState",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "style",
+          "type": "CSSProperties",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        }
+      ]
+    },
+    {
+      "componentName": "Upload",
+      "docFile": "docs/components/upload.md",
+      "documentedProps": [
+        "accept",
+        "beforeUpload",
+        "children",
+        "customRequest",
+        "defaultFileList",
+        "fileList",
+        "multiple",
+        "onChange",
+        "onRemove"
+      ],
+      "props": [
+        {
+          "name": "accept",
+          "type": "string",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "beforeUpload",
+          "type": "(file: File, fileList: File[]) => boolean \\| File \\| Promise<boolean \\| File>",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "customRequest",
+          "type": "(options: { file: File; onProgress: (percent: number) => void; onSuccess: (response?: unknown) => void; onError: (error: Error) => void }) => void",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "defaultFileList",
+          "type": "UploadFile[]",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "fileList",
+          "type": "UploadFile[]",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "multiple",
+          "type": "boolean",
+          "default": "false",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "onChange",
+          "type": "(fileList: UploadFile[]) => void",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        },
+        {
+          "name": "onRemove",
+          "type": "(file: UploadFile) => void \\| boolean",
+          "default": "undefined",
+          "required": null,
+          "source": "api_table"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+name: Governance Check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  governance:
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run governance pipeline
+        id: governance_run
+        run: pnpm governance:sync
+        continue-on-error: true
+
+      - name: Append job summary
+        if: always()
+        run: |
+          if [ -f artifacts/doc-sync.md ]; then
+            cat artifacts/doc-sync.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "# Governance Doc Sync Report" >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "- Report file not generated." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upsert PR comment
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const marker = '<!-- governance-doc-sync-comment -->';
+            const path = 'artifacts/doc-sync.md';
+            let body = `${marker}\n# Governance Doc Sync Report\n\n- Report file not generated.`;
+            if (fs.existsSync(path)) {
+              body = `${marker}\n` + fs.readFileSync(path, 'utf8');
+            }
+
+            const { owner, repo } = context.repo;
+            const issue_number = context.payload.pull_request.number;
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number,
+              per_page: 100
+            });
+
+            const existing = comments.find((comment) => comment.body && comment.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner,
+                repo,
+                comment_id: existing.id,
+                body
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number,
+                body
+              });
+            }
+
+      - name: Fail job when governance has errors
+        if: steps.governance_run.outcome == 'failure'
+        run: exit 1

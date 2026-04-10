@@ -1,0 +1,12 @@
+{
+  "generatedAt": "2026-04-10T08:14:15.844Z",
+  "sourceSchemaFile": "packages/ui/artifacts/components.schema.json",
+  "docsSchemaFile": "apps/docs/artifacts/docs.schema.json",
+  "summary": {
+    "totalComponentsInSource": 7,
+    "totalComponentsInDocs": 7,
+    "errorCount": 0,
+    "warnCount": 0
+  },
+  "issues": []
+}

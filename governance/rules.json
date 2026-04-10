@@ -1,0 +1,22 @@
+{
+  "severity": {
+    "missing_doc_file": "error",
+    "missing_in_docs": "error",
+    "missing_in_source": "warn",
+    "type_mismatch": "error",
+    "default_mismatch": "error",
+    "doc_without_source": "warn"
+  },
+  "ignore": {
+    "components": [],
+    "issues": []
+  },
+  "allowlist": {
+    "missing_in_source": {
+      "Button": ["className", "disabled"],
+      "Input": ["className", "defaultValue", "disabled", "maxLength", "placeholder", "value"]
+    },
+    "type_mismatch": {},
+    "default_mismatch": {}
+  }
+}

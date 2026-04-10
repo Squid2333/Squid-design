@@ -342,8 +342,8 @@ export default () => (
 
 | 属性名 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| `columns` | 列配置 | `TableColumn<T>[]` | `[]` |
-| `dataSource` | 表格数据源 | `T[]` | `[]` |
+| `columns` | 列配置 | `TableColumn<T>[]` | `undefined` |
+| `dataSource` | 表格数据源 | `T[]` | `undefined` |
 | `rowKey` | 行唯一标识 | `keyof T \| (record: T) => Key` | - |
 | `className` | 自定义类名 | `string` | `undefined` |
 | `style` | 自定义样式 | `CSSProperties` | `undefined` |

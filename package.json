@@ -10,15 +10,27 @@
     "dev:docs": "pnpm --filter @squid-design/docs dev",
     "storybook": "pnpm --filter @squid-design/storybook storybook",
     "build-storybook": "pnpm --filter @squid-design/storybook build-storybook",
-    "build:docs": "pnpm --filter @squid-design/docs build"
+    "build:docs": "pnpm --filter @squid-design/docs build",
+    "governance:extract:components": "node --import tsx ./packages/ui/scripts/extract-components.ts",
+    "governance:extract:docs": "node --import tsx ./apps/docs/scripts/extract-docs.ts",
+    "governance:check": "node --import tsx ./scripts/check-doc-sync.ts",
+    "governance:sync": "pnpm governance:extract:components && pnpm governance:extract:docs && pnpm governance:check",
+    "mcp:server": "node --env-file=.env --import tsx ./scripts/mcp/server.ts",
+    "mcp:client:smoke": "node --env-file=.env --import tsx ./scripts/mcp/client-smoke.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@types/node": "^24.12.0",
     "eslint": "^9.39.4",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "eslint-plugin-storybook": "^10.2.19",
     "globals": "^17.4.0",
-    "typescript-eslint": "^8.56.1"
+    "ts-morph": "^27.0.2",
+    "tsx": "^4.21.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.56.1",
+    "zod": "^4.3.6"
   }
 }
